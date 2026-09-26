@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "type": "command",
+        "matcher": "view",
+        "bash": "node \"${PLUGIN_ROOT}/hooks/scripts/agrikit-hooks.mjs\" on_file_open",
+        "powershell": "node \"$env:PLUGIN_ROOT/hooks/scripts/agrikit-hooks.mjs\" on_file_open",
+        "timeoutSec": 10
+      },
+      {
+        "type": "command",
+        "matcher": "create",
+        "bash": "node \"${PLUGIN_ROOT}/hooks/scripts/agrikit-hooks.mjs\" on_component_create",
+        "powershell": "node \"$env:PLUGIN_ROOT/hooks/scripts/agrikit-hooks.mjs\" on_component_create",
+        "timeoutSec": 10
+      },
+      {
+        "type": "command",
+        "matcher": "bash|powershell|.*create_pull_request",
+        "bash": "node \"${PLUGIN_ROOT}/hooks/scripts/agrikit-hooks.mjs\" on_pr_open",
+        "powershell": "node \"$env:PLUGIN_ROOT/hooks/scripts/agrikit-hooks.mjs\" on_pr_open",
+        "timeoutSec": 10
+      },
+      {
+        "type": "command",
+        "matcher": "skill",
+        "bash": "node \"${PLUGIN_ROOT}/hooks/scripts/agrikit-hooks.mjs\" on_skill_start",
+        "powershell": "node \"$env:PLUGIN_ROOT/hooks/scripts/agrikit-hooks.mjs\" on_skill_start",
+        "timeoutSec": 10
+      }
+    ],
+    "agentStop": [
+      {
+        "type": "command",
+        "bash": "node \"${PLUGIN_ROOT}/hooks/scripts/agrikit-hooks.mjs\" on_skill_complete",
+        "powershell": "node \"$env:PLUGIN_ROOT/hooks/scripts/agrikit-hooks.mjs\" on_skill_complete",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}

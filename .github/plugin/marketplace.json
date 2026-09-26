@@ -1,0 +1,18 @@
+{
+  "name": "ericthayer-agent-plugins",
+  "owner": {
+    "name": "Eric Thayer"
+  },
+  "metadata": {
+    "description": "Agent plugins for GitHub Copilot CLI",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "agrikit",
+      "description": "Collaborative AI-assisted design and engineering workflows for the Agrikit component library.",
+      "version": "1.0.0",
+      "source": "./agrikit-plugin"
+    }
+  ]
+}

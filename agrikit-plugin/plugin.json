@@ -1,0 +1,20 @@
+{
+  "name": "agrikit",
+  "description": "Collaborative AI-assisted design and engineering workflows for the Agrikit component library: design, engineering, and collaboration agents; component, token, hook, and LSP skills; workflow hooks; a bundled Agrikit MCP server; and TypeScript/CSS language servers.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Eric Thayer",
+    "url": "https://github.com/ericthayer"
+  },
+  "homepage": "https://github.com/ericthayer/agent-plugins/tree/main/agrikit-plugin",
+  "repository": "https://github.com/ericthayer/agent-plugins",
+  "license": "MIT",
+  "category": "design-systems",
+  "keywords": ["agrikit", "design-system", "design-tokens", "react", "components", "handoff", "figma", "lsp", "mcp"],
+  "tags": ["design", "engineering", "collaboration"],
+  "agents": "agents/",
+  "skills": "skills/",
+  "hooks": "hooks/hooks.json",
+  "mcpServers": "mcp/agrikit-mcp.json",
+  "lspServers": "lsp.json"
+}

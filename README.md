@@ -1,1 +1,1 @@
-# agent-plugin
+# agent-plugins
